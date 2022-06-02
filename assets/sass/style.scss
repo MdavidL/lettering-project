@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Roboto";
-    src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+    src: url(/assets/sass/base/Roboto/Roboto-Regular.ttf);
 }
 *, body {
     font-family: "Roboto", Verdana, Helvetica, sans-serif;
@@ -18,9 +18,11 @@
         background-color: rgba(255, 255, 255, 1);
         width: 560px;
         height: 640px;
-        text-align: center;
         border-radius: 15px;
         box-shadow: -1px 3px 10px rgba(0, 0, 0, .4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
          h1 {
             color: rgba(104, 139, 104, 1);
             font-size: 2rem;
@@ -40,7 +42,37 @@
         input {
             width: 30rem;
             height: 2rem;
+            margin-top: 1rem;
         }
     }
 }
-
+.form select {
+    width: 10rem;
+    margin-top: 1rem;
+}
+button {
+    color: rgba(104, 139, 104, 1);
+    background-color: rgba(255, 255, 255,1);
+    width: 140px;
+    height: 30px;
+    border: 1px solid rgba(104, 139, 104, 1);
+    border-radius: 50px;
+    margin: 2rem;
+    cursor: pointer;
+}
+.form__links {
+    width: 30rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(205, 202, 202, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    a {
+        color: rgba(104, 139, 104, 1);
+        padding: .5rem 0;
+    }
+}
+.form__links a:last-child {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
