@@ -7,3 +7,40 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container {
+    background-color: rgba(104, 139, 104, 1);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container__form {
+        background-color: rgba(255, 255, 255, 1);
+        width: 560px;
+        height: 640px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: -1px 3px 10px rgba(0, 0, 0, .4);
+         h1 {
+            color: rgba(104, 139, 104, 1);
+            font-size: 2rem;
+            padding: 2rem 0 3rem 0;
+        }
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label {
+        padding: .8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        input {
+            width: 30rem;
+            height: 2rem;
+        }
+    }
+}
+
