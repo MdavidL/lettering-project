@@ -12,8 +12,8 @@
         <div class="container__form">
            <h1>GYM</h1>
             <form action="" method="get" class="form">
-                <label for="identifiant">Identifiant:<input type="text"></label>
-                <label for="passeword">Mot de passe:<input type="text"></label>
+                <label  for="identifiant">Identifiant:<input id="login" type="text"></label>
+                <label  for="passeword">Mot de passe:<input id="password" type="text"></label>
                 <label for="language">Choisissez la langue:
                     <select name="language" id="">
                         <option value="fr">Français (FR)</option>
@@ -21,12 +21,14 @@
                     </select>
                 </label>
             </form>
-            <button type="submit" value="Connexion">Connexion</button>
+            <button id="btnConnexion" type="button" value="Connexion">Connexion</button>
             <div class="form__links">
                 <a href="#">Mot de passe oublié ?</a>
                 <a href="#">Besoin d'aide ?</a>
             </div>
         </div>
    </section>
+
+   <script src="JS/connexion.js"></script>
 </body>
 </html>
