@@ -1,6 +1,5 @@
 /*Variables & Mixins dans le dossier abstracts*/
 @import 'abstracts/variables';
-@import 'abstracts/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 *, body {
@@ -17,11 +16,12 @@
     height: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 /*Barre de navigation*/
 .header__navbar {
+    margin-left: 16rem;
     display: flex;
     li {
         padding: 2rem;
@@ -32,15 +32,15 @@
 }
 /*Search bar*/
 .header__searchbar {
-    margin-right: 7rem;
+    margin-left: 9rem;
     display: flex;
     img {
-        margin-left: 6rem;
+        margin-left: 4rem;
     }
 }
 .header__searchbar--elements-search {
     color: rgba(255, 255, 255, 1);
-    width: 150%;
+    width: 130%;
     border: 1px solid rgba(255, 255, 255, 1);
     border-width: 0 0 1px;
     background-color: transparent;
@@ -72,16 +72,15 @@ input::placeholder {
 }
 /*Main:*/
 .main__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
     background-color: rgba(240, 240, 240, 1);
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     z-index: 0;
 }
 /*Main: bannière*/
-.banner {
+.banner__part {
     width: 100%;
     .banner__title {
         background-color: $green-bgd-color;
@@ -106,10 +105,15 @@ input::placeholder {
         font-size: 12px;
         color: rgba(0, 0, 0, 1);
         margin-left: 6rem;
+        padding: .5rem;
     }
 }
-/*Main: formulaires  du haut*/
-.forms__table {
+.banner__navbar a:hover {
+  background-color: rgba(225, 225, 225, 1); 
+  border-radius: 50px;
+}
+/*Main: formulaires du haut*/
+.forms__part {
     margin: 1rem 1rem;
     display: flex;
     justify-content: center;
@@ -125,23 +129,44 @@ input::placeholder {
         text-align: center;
     }
 }
-.forms__table .forms__table--form-bank label,
-.forms__table .forms__table--form-bank input, 
-.forms__table .forms__table--form-bic label,
-.forms__table .forms__table--form-bic input,
-.forms__table .forms__table--form-wording-bank label,
-.forms__table .forms__table--form-wording-bank input  {
+.forms__part .forms__part--form-bank label,
+.forms__part .forms__part--form-bank input, 
+.forms__part .forms__part--form-bic label,
+.forms__part .forms__part--form-bic input,
+.forms__part .forms__part--form-wording-bank label,
+.forms__part .forms__part--form-wording-bank input  {
     height: 2rem;
     width: 630px;
     box-shadow: 1px 3px 6px rgba(0, 0, 0, .1);
     border: none;
 }
-.forms__table .forms__table--form-bank label,
-.forms__table .forms__table--form-bank input {
+.forms__part .forms__part--form-bank label,
+.forms__part .forms__part--form-bank input {
     width: 180px;
 }
 .btn__add button {
+    margin-top: 1rem;
     border: none;
+    cursor: pointer;
+}
+/*Main: tableau*/
+.table__part {
+    margin-left: 2rem;
+}
+.table {
+    border-collapse: collapse;
+    thead {
+        background-color: $green-bgd-color;
+    }
+}
+.table th:nth-child(1) {
+    width: 180px;
+    height: 2rem;
+}
+.table th:nth-child(2),
+.table th:nth-child(3) {
+    width: 660px;
+    height: 2rem;
 }
 /*Footer*/
 .footer, ul {

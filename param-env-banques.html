@@ -32,7 +32,7 @@
     </header>
 
     <main class="main__container">
-        <section class="banner">
+        <section class="banner__part">
             <div class="banner__title">
                 <h1>Paramétrage de l'environnmement - Gestion des banques</h1>
             </div>
@@ -48,16 +48,16 @@
                 </ul>
             </div>
         </section>
-        <section class="forms__table">
-            <form class="forms__table forms__table--form-bank" action="">
+        <section class="forms__part">
+            <form class="forms__part forms__part--form-bank" action="">
                 <label for="code">Code Banque</label>
                 <input id="code" type="text" name="name">
             </form>
-            <form class="forms__table forms__table--form-bic" action="">
+            <form class="forms__part forms__part--form-bic" action="">
                 <label for="bic">BIC</label>
                 <input id="bic" type="text">
             </form>
-            <form class="forms__table forms__table--form-wording-bank" action="">
+            <form class="forms__part forms__part--form-wording-bank" action="">
                 <label for="wording">Libellé Banque</label>
                 <input id="wording"  type="text">
             </form>
@@ -65,16 +65,12 @@
                 <button><img src="assets/img/param-env-banques-img/icon-add.png" alt="icône ajout ligne"></button>
             </div>
         </section>
-        <section>
-            <table>
+        <section class="table__part">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Code Banque</th>
-                    </tr>
-                    <tr>
                         <th>BIC</th>
-                    </tr>
-                    <tr>
                         <th>Libellé Banque</th>
                     </tr>
                 </thead>
