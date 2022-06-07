@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/param-env-banques.css" media="screen">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
             <img src="assets/img/param-env-banques-img/icon-logo.png" alt="logo">
         </div>
@@ -20,7 +20,10 @@
             <li><a href="#">Historique</a></li>
         </ul>
         <div class="header__searchbar">
-            <img src="" alt="icône loupe">
+            <form class="header__searchbar--elements" action="">
+                <input class="header__searchbar--elements-search" placeholder="Rechercher">
+            </form>
+                <img src="assets/img/param-env-banques-img/icon-magnifier.png" alt="icône loupe">
         </div>
         <div class="header__user">
             <img src="assets/img/param-env-banques-img/avatar-user.png" alt="avatar de l'utilisateur">
@@ -45,23 +48,17 @@
                 </ul>
             </div>
         </section>
-        <section>
-            <form action="">
-                <label for="">Code Banque
-                    <input type="text">
-                </label>
+        <section class="forms__table">
+            <form class="forms__table form--top" action="">
+                <label for="">Code Banque<input type="text"></label>
             </form>
-            <form action="">
-                <label for="">BIC
-                    <input type="text">
-                </label>
+            <form class="forms__table form--top" action="">
+                <label for="">BIC<input type="text"></label>
             </form>
-            <form action="">
-                <label for="">Libellé Banque
-                    <input type="text">
-                </label>
+            <form class="forms__table form--top" action="">
+                <label for="">Libellé Banque<input type="text"></label>
+                <img src="" alt="icône ajout ligne">
             </form>
-            <img src="" alt="icône ajout ligne">
         </section>
         <section>
             <table>
@@ -96,7 +93,8 @@
             </table>
         </section>
     </main>
-    <footer>
+
+    <footer class="footer">
         <ul>
             <li><a href="#">Accueil</a></li>
             <li><a href="#">A propos</a></li>
