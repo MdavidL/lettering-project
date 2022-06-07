@@ -110,13 +110,40 @@ input::placeholder {
 }
 /*Main: formulaires  du haut*/
 .forms__table {
-    width: 80%;
+    margin: 1rem 1rem;
     display: flex;
+    justify-content: center;
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        color: rgba(255, 255, 255, 1);
+        background-color: $green-bgd-color;
+        padding: .5rem;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+    }
 }
-.forms__table .form--top label {
-    display: flex;
-    flex-direction: column;
+.forms__table .forms__table--form-bank label,
+.forms__table .forms__table--form-bank input, 
+.forms__table .forms__table--form-bic label,
+.forms__table .forms__table--form-bic input,
+.forms__table .forms__table--form-wording-bank label,
+.forms__table .forms__table--form-wording-bank input  {
+    height: 2rem;
+    width: 630px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, .1);
+    border: none;
 }
+.forms__table .forms__table--form-bank label,
+.forms__table .forms__table--form-bank input {
+    width: 180px;
+}
+.btn__add button {
+    border: none;
+}
+/*Footer*/
 .footer, ul {
     bottom: 0;
     display: flex;

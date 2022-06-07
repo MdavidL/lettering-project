@@ -119,41 +119,14 @@ input::placeholder {
 
 /*Main: formulaires  du haut*/
 .forms__table {
-  margin: 1rem 1rem;
+  width: 80%;
   display: flex;
-  justify-content: center;
 }
-.forms__table form {
+
+.forms__table .form--top label {
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-}
-.forms__table label {
-  color: rgb(255, 255, 255);
-  background-color: rgb(104, 139, 104);
-  padding: 0.5rem;
-  border-radius: 10px 10px 0 0;
-  text-align: center;
-}
-
-.forms__table .forms__table--form-bank label,
-.forms__table .forms__table--form-bank input,
-.forms__table .forms__table--form-bic label,
-.forms__table .forms__table--form-bic input,
-.forms__table .forms__table--form-wording-bank label,
-.forms__table .forms__table--form-wording-bank input {
-  height: 2rem;
-  width: 630px;
-  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
-  border: none;
-}
-
-.forms__table .forms__table--form-bank label,
-.forms__table .forms__table--form-bank input {
-  width: 180px;
-}
-
-.btn__add button {
-  border: none;
 }
 
 /*Footer*/
@@ -165,4 +138,4 @@ input::placeholder {
   align-items: center;
 }
 
-/*# sourceMappingURL=param-env-banques.css.map */
+/*# sourceMappingURL=param-env-banques.scss.map */
