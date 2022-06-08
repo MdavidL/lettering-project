@@ -233,3 +233,13 @@ input::placeholder {
 .footer a:hover {
     font-weight: 500;
 }
+/*Responsive*/
+@media screen and (max-width: 1600px) {
+
+    .header__navbar {
+        margin-left: 5rem;
+        li {
+            padding: 1rem;
+        }
+    }
+}

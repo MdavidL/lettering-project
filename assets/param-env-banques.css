@@ -266,4 +266,14 @@ input::placeholder {
   font-weight: 500;
 }
 
+/*Responsive*/
+@media screen and (max-width: 1600px) {
+  .header__navbar {
+    margin-left: 5rem;
+  }
+  .header__navbar li {
+    padding: 1rem;
+  }
+}
+
 /*# sourceMappingURL=param-env-banques.css.map */
