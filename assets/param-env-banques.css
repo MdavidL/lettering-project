@@ -22,7 +22,7 @@
 
 /*Barre de navigation*/
 .header__navbar {
-  margin-left: 16rem;
+  margin-left: 10rem;
   display: flex;
 }
 .header__navbar li {
@@ -34,7 +34,7 @@
 
 /*Search bar*/
 .header__searchbar {
-  margin-left: 9rem;
+  margin-left: 4rem;
   display: flex;
 }
 .header__searchbar img {
@@ -80,11 +80,10 @@ input::placeholder {
 /*Main:*/
 .main__container {
   background-color: rgb(240, 240, 240);
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  z-index: 0;
+  align-items: center;
 }
 
 /*Main: bannière*/
@@ -118,18 +117,27 @@ input::placeholder {
   padding: 0.5rem;
 }
 
+.banner__navbar li:first-child {
+  font-weight: 800;
+  text-decoration: underline;
+}
+
 .banner__navbar a:hover {
   background-color: rgb(225, 225, 225);
   border-radius: 50px;
 }
 
 /*Main: formulaires du haut*/
+.main__content {
+  width: 100%;
+}
+
 .forms__part {
-  margin: 1rem 1rem;
+  margin-top: 1rem;
   display: flex;
-  justify-content: center;
 }
 .forms__part form {
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -141,39 +149,40 @@ input::placeholder {
   text-align: center;
 }
 
-.forms__part .forms__part--form-bank label,
-.forms__part .forms__part--form-bank input,
-.forms__part .forms__part--form-bic label,
-.forms__part .forms__part--form-bic input,
-.forms__part .forms__part--form-wording-bank label,
-.forms__part .forms__part--form-wording-bank input {
-  height: 2rem;
-  width: 630px;
+.forms__part input {
+  padding: 0.5rem;
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
   border: none;
 }
 
-.forms__part .forms__part--form-bank label,
-.forms__part .forms__part--form-bank input {
-  width: 180px;
+.forms__part form:nth-child(1) {
+  width: 32%;
+}
+
+.forms__part form:nth-child(2),
+.forms__part form:nth-child(3) {
+  height: 2rem;
+  width: 100%;
 }
 
 .btn__add button {
-  margin-top: 1rem;
+  margin: 0.2rem;
   border: none;
   cursor: pointer;
 }
 
 /*Main: tableau*/
-.table__part {
-  margin-left: 2rem;
-}
-
 .table {
+  width: 96%;
+  margin: 1rem 0 0 0.5rem;
   border-collapse: collapse;
 }
 .table thead {
+  color: rgb(255, 255, 255);
   background-color: rgb(104, 139, 104);
+}
+.table thead th {
+  font-weight: 400;
 }
 
 .table th:nth-child(1) {
@@ -187,8 +196,47 @@ input::placeholder {
   height: 2rem;
 }
 
+.table tbody td {
+  padding: 0.2rem;
+  border-right: 1px solid rgb(0, 0, 0);
+}
+
+.table tbody td:last-child {
+  border: none;
+}
+
+.table tbody > tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+.table tbody > tr:nth-child(even) {
+  background-color: rgb(232, 232, 232);
+}
+
+.table tbody > tr:nth-child(odd):hover,
+.table tbody > tr:nth-child(even):hover {
+  background-color: rgb(203, 221, 197);
+}
+
+.table tbody > tr:hover .table-edit-icon,
+.table tbody > tr:hover .table-trash-icon {
+  background-color: rgb(203, 221, 197);
+  visibility: visible;
+}
+
+.table-edit-icon {
+  margin-left: 35rem;
+  visibility: hidden;
+}
+
+.table-trash-icon {
+  margin-left: 2rem;
+  visibility: hidden;
+}
+
 /*Footer*/
 .footer, ul {
+  background-color: rgb(240, 240, 240);
   bottom: 0;
   display: flex;
   flex-direction: row;
