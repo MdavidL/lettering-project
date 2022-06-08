@@ -26,7 +26,7 @@
     li {
         padding: 2rem;
         a {
-            color: rgba(255, 255, 255, 1);
+            color: $white-color;
         }
     }
 }
@@ -39,15 +39,15 @@
     }
 }
 .header__searchbar--elements-search {
-    color: rgba(255, 255, 255, 1);
+    color: $white-color;
     width: 130%;
-    border: 1px solid rgba(255, 255, 255, 1);
+    border: 1px solid $white-color;
     border-width: 0 0 1px;
     background-color: transparent;
 }
 .header__searchbar--elements-search:focus {
-    color: rgba(255, 255, 255, 1);
-    border-color: rgba(255, 255, 255, 1);
+    color: $white-color;
+    border-color: $white-color;
     outline: none;
 }
 input::placeholder {
@@ -65,7 +65,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     span {
-        color: rgba(255, 255, 255, 1);
+        color: $white-color;
         font-size: 11px;
         padding: .3rem;
     }
@@ -73,7 +73,7 @@ input::placeholder {
 /*Main:*/
 .main__container {
     background-color: rgba(240, 240, 240, 1);
-    height: 90vh;
+    height: 86vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,19 +87,22 @@ input::placeholder {
         margin-top: 1rem;
         padding: .4rem;
         h1 {
-            color: rgba(255, 255, 255, 1);
+            color: $white-color;
             font-weight: 400;
         }
     }
 }
 .banner__navbar {
     display: flex;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $white-color;
     padding: .8rem;
     box-shadow: 1px 3px 6px rgba(0, 0, 0, .1);
     span {
         margin-left: 5rem;
     }
+}
+.banner__navbar ul {
+    display: flex;
     a {
         font-size: 12px;
         color: rgba(0, 0, 0, 1);
@@ -128,7 +131,7 @@ input::placeholder {
         flex-direction: column;
     }
     label {
-        color: rgba(255, 255, 255, 1);
+        color: $white-color;
         background-color: $green-bgd-color;
         padding: .5rem;
         border-radius: 10px 10px 0 0;
@@ -159,7 +162,7 @@ input::placeholder {
     margin: 1rem 0 0 .5rem;
     border-collapse: collapse;
     thead {
-        color: rgba(255, 255, 255, 1);
+        color: $white-color;
         background-color: $green-bgd-color;
         th {
             font-weight: 400;
@@ -183,7 +186,7 @@ input::placeholder {
     border: none;
 }
 .table tbody > tr:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $white-color;
 }
 .table tbody > tr:nth-child(even) {
     background-color: rgba(232, 232, 232, 1);
@@ -206,11 +209,27 @@ input::placeholder {
     visibility: hidden;
 }
 /*Footer*/
-.footer, ul {
+.footer {
     background-color: rgba(240, 240, 240, 1);
     bottom: 0;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    ul {
+        display: flex;
+        li {
+            margin: 0 .5rem 1rem;
+            padding-right: 1rem;
+            border-right: 2px solid rgba(0, 0, 0, 1);
+            a {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+}
+.footer li:last-child {
+    border: none;
+}
+.footer a:hover {
+    font-weight: 500;
 }
