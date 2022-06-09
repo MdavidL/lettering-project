@@ -10,73 +10,6 @@
   box-sizing: border-box;
 }
 
-.header {
-  background-color: rgb(104, 139, 104);
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-/*Barre de navigation*/
-.header__navbar {
-  margin-left: 10rem;
-  display: flex;
-}
-.header__navbar li {
-  padding: 2rem;
-}
-.header__navbar li a {
-  color: rgb(255, 255, 255);
-}
-
-/*Search bar*/
-.header__searchbar {
-  margin-left: 4rem;
-  display: flex;
-}
-.header__searchbar img {
-  margin-left: 4rem;
-}
-
-.header__searchbar--elements-search {
-  color: rgb(255, 255, 255);
-  width: 130%;
-  border: 1px solid rgb(255, 255, 255);
-  border-width: 0 0 1px;
-  background-color: transparent;
-}
-
-.header__searchbar--elements-search:focus {
-  color: rgb(255, 255, 255);
-  border-color: rgb(255, 255, 255);
-  outline: none;
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-/*Partie utilisateur*/
-.header__user {
-  position: absolute;
-  background-color: rgb(76, 119, 76);
-  width: 200px;
-  height: 100px;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.header__user span {
-  color: rgb(255, 255, 255);
-  font-size: 11px;
-  padding: 0.3rem;
-}
-
 /*Main:*/
 .main__container {
   background-color: rgb(240, 240, 240);
@@ -236,44 +169,6 @@ input::placeholder {
 .table-trash-icon {
   margin-left: 2rem;
   visibility: hidden;
-}
-
-/*Footer*/
-.footer {
-  background-color: rgb(240, 240, 240);
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-}
-.footer ul {
-  display: flex;
-}
-.footer ul li {
-  margin: 0 0.5rem 1rem;
-  padding-right: 1rem;
-  border-right: 2px solid rgb(0, 0, 0);
-}
-.footer ul li a {
-  font-size: 12px;
-  color: rgb(0, 0, 0);
-}
-
-.footer li:last-child {
-  border: none;
-}
-
-.footer a:hover {
-  font-weight: 500;
-}
-
-/*Responsive*/
-@media screen and (max-width: 1600px) {
-  .header__navbar {
-    margin-left: 5rem;
-  }
-  .header__navbar li {
-    padding: 1rem;
-  }
 }
 
 /*# sourceMappingURL=param-env-banques.css.map */
