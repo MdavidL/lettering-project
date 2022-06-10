@@ -34,4 +34,24 @@
   font-weight: 400;
 }
 
+.banner__title--submenu {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to right, rgb(83, 83, 83) 0%, rgb(143, 143, 143) 100%);
+  margin-top: 0.3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.banner__title--submenu-green-bgd {
+  background: linear-gradient(to right, rgb(95, 162, 124) 0%, rgb(106, 174, 104) 100%);
+  padding: 0.6rem 7rem;
+}
+.banner__title--submenu-green-bgd span {
+  font-size: 12px;
+  padding: 0.3rem;
+}
+
+/*Tableau banque*/
+
 /*# sourceMappingURL=lettrage.css.map */

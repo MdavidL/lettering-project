@@ -33,3 +33,20 @@
         }
     }
 }
+.banner__title--submenu {
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(to right, rgba(83,83,83,1) 0%, rgba(143,143,143,1) 100%);
+    margin-top: .3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.banner__title--submenu-green-bgd {
+    background: linear-gradient(to right, rgba(95,162,124,1) 0%, rgba(106,174,104,1) 100%);
+    padding: .6rem 7rem;
+    span {
+        font-size: 12px;
+        padding: .3rem;
+    }
+}
+/*Tableau banque*/
