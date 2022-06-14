@@ -45,38 +45,54 @@
             </div>
         </section>
         <section class="filter__part">
-            <h2>FILTRE</h2>
-            <form class="filter__part--block-top" action="" >
-                <img src="" alt="icône agrandir">
-                <div class="">
-                    <label for="all">Tout</label>
-                    <input type="checkbox" name="" id="all">
-                </div>
-                <div class="">
-                    <label for="company">Société</label>
-                    <input type="checkbox" name="" id="company">
-                </div>
-                <div class="">
-                    <label for="account">Compte</label>
-                    <input type="checkbox" name="" id="account">
-                </div>
-                <span>Filtre appliqué:</span>
-            </form>
-            <form class="filter__part--block-bottom" action="">
-                <div class="">
-                    <label for="lettering">Lettré</label>
-                    <input type="checkbox" id="lettering">
-                </div>
-                <div class="">
-                    <label for="partiallyLettering">Partiellement lettré</label>
-                    <input type="checkbox" id="partiallyLettering">
-                </div>    
-                <div class="">
-                    <label for="noLettering">Non-lettré</label>
-                    <input type="checkbox" id="noLettering">
-                </div>
-                <button type="submit">LETTRAGE AUTOMATIQUE</button>
-            </form>
+            <div class="filter__part--elements-top">
+                <h2>Filtre</h2>
+                <form class="filter__part--form-top" action="" >
+                    <button class="filter__part--form-top-btn" type="button"><img src="assets/img/lettrage/icon-arrow-right.png" alt="icône agrandir"></button>
+                    <div>
+                        <label class="label" for="all">Tout
+                            <input type="checkbox" name="" id="all">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="label" for="company">Société
+                            <input type="checkbox" name="" id="company">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="label" for="account">Compte
+                            <input type="checkbox" name="" id="account">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <span>Filtre appliqué:</span>
+                </form>
+            </div>
+            <div class="filter__part--elements-bottom">
+                <form class="filter__part--form-bottom" action="">
+                    <div class="filter__part--form-bottom-lettering">
+                        <label class="label" for="lettering">Lettré
+                            <input type="checkbox" id="lettering">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="filter__part--form-bottom-partially-lettering">
+                        <label class="label" for="partiallyLettering">Partiellement lettré
+                            <input type="checkbox" id="partiallyLettering">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>    
+                    <div class="filter__part--form-bottom-no-lettering">
+                        <label class="label" for="noLettering">Non-lettré
+                            <input type="checkbox" id="noLettering">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button class="filter__part--form-bottom-btn" type="submit">LETTRAGE AUTOMATIQUE</button>
+                </form>
+            </div>
         </section>
         <section class="table__bank">
             <a>Plus de filtres</a>

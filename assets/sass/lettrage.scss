@@ -11,10 +11,15 @@
     list-style: none;
     box-sizing: border-box;
 }
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 /*Main*/
 .main__container {
     background-color: rgba(240, 240, 240, 1);
-    height: 86vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +39,7 @@
     }
 }
 .banner__title--submenu {
-    color: rgba(255, 255, 255, 1);
+    color: $white-color;
     background: linear-gradient(to right, rgba(83,83,83,1) 0%, rgba(143,143,143,1) 100%);
     margin-top: .3rem;
     text-align: center;
@@ -49,4 +54,118 @@
         padding: .3rem;
     }
 }
+/*Filtre haut*/
+.filter__part--elements-top {
+    color: $white-color;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    h2 {
+        font-weight: 400;
+        background: linear-gradient(to right, rgba(95,162,124,1) 0%, rgba(106,174,104,1) 100%);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+        width: 4rem;
+        height: 2rem;
+        padding-top: .4rem;
+        border-radius: 5px 0 0 5px;
+        text-align: center;
+    }
+}
+.filter__part--form-top {
+    background-color: rgba(146, 146, 146, 1);
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, .2);
+    width: 80rem;
+    height: 2rem;
+    padding-right: 5rem;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .filter__part--form-top-btn img {
+        margin-top: .3rem;
+        width: .6rem;
+    }
+}
+.filter__part--form-top label, span,
+.filter__part--form-bottom label, span {
+    font-size: 12px;
+}
+/*Filtre bas*/
+.filter__part--elements-bottom {
+    margin-top: .5rem;
+    .filter__part--form-bottom {
+        background-color: rgba(110, 110, 110, 1);
+        box-shadow: 3px 1px 5px rgba(0, 0, 0, .2);
+        width: 84rem;
+        height: 3rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.filter__part--form-bottom-lettering label {
+    color: rgba(102, 217, 29, 1);
+}
+.filter__part--form-bottom-partially-lettering label {
+    color: rgba(255, 163, 85, 1);
+}
+.filter__part--form-bottom-no-lettering label {
+    color: $white-color;
+}
+.filter__part--form-bottom-btn {
+    @include main-btn;
+    color: $white-color;
+    border: 1px solid $white-color;
+    width: 200px;
+}    
+/*Customisation des checkboxes*/
+.label {
+display: block;
+position: relative;
+padding-left: 2rem;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.label input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+z-index: 2;
+}
+.checkmark {
+position: absolute;
+width: 15px;
+height: 15px;
+border: 1px solid $white-color;
+border-radius: 3px;
+top: 0;
+left: 0;
+z-index: 2;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.label input:checked ~ .checkmark:after {
+display: block;
+}
+.label .checkmark:after {
+bottom: 2px;
+left: 4px;
+width: 5px;
+height: 15px;
+border: solid rgba(127, 216, 124, 1);
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
 /*Tableau banque*/
