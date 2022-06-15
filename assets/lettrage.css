@@ -16,6 +16,11 @@ button {
   cursor: pointer;
 }
 
+table {
+  width: 95rem;
+  border-collapse: collapse;
+}
+
 /*Main*/
 .main__container {
   background-color: rgb(240, 240, 240);
@@ -136,6 +141,11 @@ button {
   width: 200px;
 }
 
+.filter__part--form-bottom-btn:hover {
+  background: linear-gradient(to right, rgb(95, 162, 124) 0%, rgb(106, 174, 104) 100%);
+  border: none;
+}
+
 /*Customisation des checkboxes*/
 .label {
   display: block;
@@ -191,5 +201,58 @@ button {
 }
 
 /*Tableau banque*/
+.table__bank, .table__invoice {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.table__bank a, .table__invoice a {
+  font-size: 12px;
+}
+
+.table__bank table thead {
+  background: linear-gradient(to right, rgb(73, 141, 172) 0%, rgb(92, 162, 188) 100%);
+}
+.table__bank table thead th {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 3.5rem;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 3.5rem;
+}
+
+.table__bank table th:first-child,
+.table__invoice table th:first-child {
+  border-radius: 5px 0 0 0;
+}
+
+.table__bank table th:last-child,
+.table__invoice table th:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+.table__bank a, span {
+  color: rgb(101, 167, 191);
+}
+
+/*Tableau facture*/
+.table__invoice table thead {
+  background: linear-gradient(to right, rgb(172, 100, 73) 0%, rgb(191, 139, 101) 100%);
+}
+.table__invoice table thead th {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 3.5rem;
+  padding: 0.4rem 2.5rem;
+}
+
+.table__invoice a, span {
+  color: rgb(191, 139, 101);
+}
 
 /*# sourceMappingURL=lettrage.css.map */
