@@ -203,8 +203,32 @@ transform: rotate(45deg);
 .table__invoice table th:last-child {
     border-radius: 0 5px 0 0;
 }
-.table__bank a, span {
+.table__bank a, .table__bank span {
     color: rgba(101, 167, 191, 1);
+}
+.table__bank tbody td,
+.table__invoice tbody td {
+    font-size: 12px;
+    padding: .2rem;
+    border-right: 1px solid rgba(0, 0, 0, 1);
+}
+.table__bank tbody td:last-child,
+.table__invoice tbody td:last-child {
+    border: none;
+}
+.table__bank tbody tr:nth-child(odd),
+.table__invoice tbody tr:nth-child(odd) {
+    background-color: $white-color;
+}
+.table__bank tbody tr:nth-child(even),
+.table__invoice tbody tr:nth-child(even) {
+    background-color: rgba(232, 232, 232, 1);
+}
+.table__bank tbody tr:nth-child(odd):hover,
+.table__bank tbody tr:nth-child(even):hover,
+.table__invoice tbody tr:nth-child(odd):hover,
+.table__invoice tbody tr:nth-child(even):hover {
+    background-color: rgba(203, 221, 197, 1);
 }
 /*Tableau facture*/
 .table__invoice table thead {
@@ -214,6 +238,6 @@ transform: rotate(45deg);
         padding: .4rem 2.5rem;
     }
 }
-.table__invoice a, span {
+.table__invoice a, .table__invoice span {
     color: rgba(191, 139, 101, 1);
 }

@@ -235,8 +235,37 @@ table {
   border-radius: 0 5px 0 0;
 }
 
-.table__bank a, span {
+.table__bank a, .table__bank span {
   color: rgb(101, 167, 191);
+}
+
+.table__bank tbody td,
+.table__invoice tbody td {
+  font-size: 12px;
+  padding: 0.2rem;
+  border-right: 1px solid rgb(0, 0, 0);
+}
+
+.table__bank tbody td:last-child,
+.table__invoice tbody td:last-child {
+  border: none;
+}
+
+.table__bank tbody tr:nth-child(odd),
+.table__invoice tbody tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+.table__bank tbody tr:nth-child(even),
+.table__invoice tbody tr:nth-child(even) {
+  background-color: rgb(232, 232, 232);
+}
+
+.table__bank tbody tr:nth-child(odd):hover,
+.table__bank tbody tr:nth-child(even):hover,
+.table__invoice tbody tr:nth-child(odd):hover,
+.table__invoice tbody tr:nth-child(even):hover {
+  background-color: rgb(203, 221, 197);
 }
 
 /*Tableau facture*/
@@ -251,7 +280,7 @@ table {
   padding: 0.4rem 2.5rem;
 }
 
-.table__invoice a, span {
+.table__invoice a, .table__invoice span {
   color: rgb(191, 139, 101);
 }
 
