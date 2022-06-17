@@ -260,4 +260,16 @@ table tbody tr:hover .table-trash-icon {
     margin: 1rem;
     opacity: .3;
 }
+/*Responsive*/
+@media screen and (max-width: 1600px) {
 
+    table {
+        width: 84rem;
+    }
+    .table__bank table thead th {
+            padding: .4rem 2.5rem;
+        }
+    .table__invoice table thead th {
+            padding: .4rem 1.5rem;
+        }
+    }
