@@ -50,7 +50,7 @@ table {
     display: flex;
     justify-content: center;
     .banner__title--submenu-green-bgd {
-        background: linear-gradient(to right, rgba(95,162,124,1) 0%, rgba(106,174,104,1) 100%);
+        background: $green-bgd-gradient;
         padding: .6rem 7rem;
         span {
             font-size: 12px;
@@ -66,7 +66,7 @@ table {
     align-items: center;
     h2 {
         font-weight: 400;
-        background: linear-gradient(to right, rgba(95,162,124,1) 0%, rgba(106,174,104,1) 100%);
+        background: $green-bgd-gradient;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
         width: 4rem;
         height: 2rem;
@@ -192,7 +192,7 @@ z-index: 2;
     color: rgba(101, 167, 191, 1);
 }
 .table__bank table thead {
-    background: linear-gradient(to right, rgba(73,141,172,1) 0%, rgba(92,162,188,1) 100%);
+    background: $blue-bgd-gradient;
     th {
         @include table-th;
         font-size: 12px;
@@ -202,7 +202,7 @@ z-index: 2;
     }
 }
 .table__invoice table thead {
-    background: linear-gradient(to right, rgba(172,100,73,1) 0%, rgba(191,139,101,1) 100%);
+    background: $orange-bgd-gradient;
     th {
         @include table-th;
         padding: .4rem 2.5rem;
@@ -234,11 +234,11 @@ table tbody tr:nth-child(even) {
 /*Hover ligne & icônes en hover*/
 table tbody tr:nth-child(odd):hover,
 table tbody tr:nth-child(even):hover {
-    background-color: rgba(203, 221, 197, 1);
+    background-color: $hover-line;
 }
 table tbody tr:hover .table-edit-icon,
 table tbody tr:hover .table-trash-icon {
-    background-color: rgba(203, 221, 197, 1);
+    background-color: $hover-line;
     visibility: visible;
 }
 .table-edit-icon {
