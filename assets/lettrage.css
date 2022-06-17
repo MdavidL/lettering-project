@@ -53,12 +53,11 @@ table {
   display: flex;
   justify-content: center;
 }
-
-.banner__title--submenu-green-bgd {
+.banner__title--submenu .banner__title--submenu-green-bgd {
   background: linear-gradient(to right, rgb(95, 162, 124) 0%, rgb(106, 174, 104) 100%);
   padding: 0.6rem 7rem;
 }
-.banner__title--submenu-green-bgd span {
+.banner__title--submenu .banner__title--submenu-green-bgd span {
   font-size: 12px;
   padding: 0.3rem;
 }
@@ -92,7 +91,7 @@ table {
   justify-content: space-around;
   align-items: center;
 }
-.filter__part--form-top .filter__part--form-top-btn img {
+.filter__part--form-top img {
   margin-top: 0.3rem;
   width: 0.6rem;
 }
@@ -140,7 +139,6 @@ table {
   border: 1px solid rgb(255, 255, 255);
   width: 200px;
 }
-
 .filter__part--form-bottom-btn:hover {
   background: linear-gradient(to right, rgb(95, 162, 124) 0%, rgb(106, 174, 104) 100%);
   border: none;
@@ -157,7 +155,6 @@ table {
   -ms-user-select: none;
   user-select: none;
 }
-
 .label input {
   position: absolute;
   opacity: 0;
@@ -165,23 +162,6 @@ table {
   height: 0;
   width: 0;
   z-index: 2;
-}
-
-.checkmark {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 3px;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
 }
 
 .label input:checked ~ .checkmark:after {
@@ -200,7 +180,23 @@ table {
   transform: rotate(45deg);
 }
 
-/*Tableau banque*/
+.checkmark {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/*Tableaux*/
 .table__bank, .table__invoice {
   margin-top: 1rem;
   display: flex;
@@ -209,6 +205,14 @@ table {
 }
 .table__bank a, .table__invoice a {
   font-size: 12px;
+}
+
+.table__bank span, .table__invoice span {
+  margin-top: 0.7rem;
+}
+
+.table__bank a, .table__bank span {
+  color: rgb(101, 167, 191);
 }
 
 .table__bank table thead {
@@ -225,50 +229,6 @@ table {
   padding: 0.4rem 3.5rem;
 }
 
-.table__bank table th:first-child,
-.table__invoice table th:first-child {
-  border-radius: 5px 0 0 0;
-}
-
-.table__bank table th:last-child,
-.table__invoice table th:last-child {
-  border-radius: 0 5px 0 0;
-}
-
-.table__bank a, .table__bank span {
-  color: rgb(101, 167, 191);
-}
-
-.table__bank tbody td,
-.table__invoice tbody td {
-  font-size: 12px;
-  padding: 0.2rem;
-  border-right: 1px solid rgb(0, 0, 0);
-}
-
-.table__bank tbody td:last-child,
-.table__invoice tbody td:last-child {
-  border: none;
-}
-
-.table__bank tbody tr:nth-child(odd),
-.table__invoice tbody tr:nth-child(odd) {
-  background-color: rgb(255, 255, 255);
-}
-
-.table__bank tbody tr:nth-child(even),
-.table__invoice tbody tr:nth-child(even) {
-  background-color: rgb(232, 232, 232);
-}
-
-.table__bank tbody tr:nth-child(odd):hover,
-.table__bank tbody tr:nth-child(even):hover,
-.table__invoice tbody tr:nth-child(odd):hover,
-.table__invoice tbody tr:nth-child(even):hover {
-  background-color: rgb(203, 221, 197);
-}
-
-/*Tableau facture*/
 .table__invoice table thead {
   background: linear-gradient(to right, rgb(172, 100, 73) 0%, rgb(191, 139, 101) 100%);
 }
@@ -282,6 +242,72 @@ table {
 
 .table__invoice a, .table__invoice span {
   color: rgb(191, 139, 101);
+}
+
+table th:first-child {
+  border-radius: 5px 0 0 0;
+}
+
+table th:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+table tbody td {
+  font-size: 12px;
+  padding: 0.2rem;
+  border-right: 1px solid rgb(0, 0, 0);
+}
+
+table tbody td:last-child {
+  border: none;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgb(232, 232, 232);
+}
+
+/*Hover ligne & icônes en hover*/
+table tbody tr:nth-child(odd):hover,
+table tbody tr:nth-child(even):hover {
+  background-color: rgb(203, 221, 197);
+}
+
+table tbody tr:hover .table-edit-icon,
+table tbody tr:hover .table-trash-icon {
+  background-color: rgb(203, 221, 197);
+  visibility: visible;
+}
+
+.table-edit-icon {
+  margin-left: 8rem;
+  visibility: hidden;
+}
+
+.table__invoice .table-edit-icon {
+  margin-left: 4rem;
+  visibility: hidden;
+}
+
+.table-trash-icon {
+  margin-left: 2rem;
+  visibility: hidden;
+}
+
+/*Bouton lettrage*/
+.btn__lettering {
+  font-size: 12px;
+  width: 140px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 2rem;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 1rem;
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=lettrage.css.map */
